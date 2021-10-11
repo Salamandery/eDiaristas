@@ -1,7 +1,10 @@
-import { styled } from '@mui/material/styles';
+import { styled } from "@mui/material/styles";
 
-export const SafeEnviromentContainer = styled('div')`
+export const SafeEnviromentContainer = styled("div")`
     text-align: right;
-    padding: 16px 0px;
+    background-color: padding: ${({ theme }) =>
+        theme.palette.background.default};
+    color: ${({ theme }) => theme.palette.text.secondary};
+    padding: ${({ theme }) => theme.spacing(2)} 0;
     font-size: 12px;
 `;
