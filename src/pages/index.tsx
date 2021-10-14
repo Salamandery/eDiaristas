@@ -2,6 +2,7 @@ import type { NextPage } from "next";
 import SafeEnvironment from "@components/feedback/SafeEnvironment";
 import PageTitle from "@components/PageTitle";
 import UserInformation from "@components/UserInformation";
+import TextFieldMasked from "ui/components/inputs/TextFieldMasked";
 
 const Home: NextPage = () => {
     return (
@@ -12,6 +13,12 @@ const Home: NextPage = () => {
                 subtitle={
                     "Preencha seu endereço e veja todos os profissionais da sua localidade"
                 }
+            />
+            <TextFieldMasked
+                mask={"99.999-999"}
+                label={"Digite seu CEP"}
+                variant={"outlined"}
+                fullWidth
             />
             <UserInformation
                 name={"Rodolfo M F Abreu"}

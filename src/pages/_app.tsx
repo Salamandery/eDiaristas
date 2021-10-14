@@ -1,8 +1,10 @@
 import "@styles/globals.css";
 import type { AppProps } from "next/app";
 import { ThemeProvider } from "@mui/material";
+import { AppContainer } from "ui/styles/pages/styles";
 import Head from "next/head";
 import PageHeader from "ui/components/surfaces/Header";
+import PageFooter from "@components/surfaces/Footer";
 import theme from "ui/themes/themes";
 
 function MyApp({ Component, pageProps }: AppProps) {
@@ -17,8 +19,11 @@ function MyApp({ Component, pageProps }: AppProps) {
                 <title>E-DIARISTAS</title>
             </Head>
             <ThemeProvider theme={theme}>
-                <PageHeader />
-                <Component {...pageProps} />
+                <AppContainer>
+                    <PageHeader />
+                    <Component {...pageProps} />
+                    <PageFooter />
+                </AppContainer>
             </ThemeProvider>
         </>
     );
